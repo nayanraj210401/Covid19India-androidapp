@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <androidx.gridlayout.widget.GridLayout
+            app:rowCount="2"
+            android:layout_gravity="center"
+            android:paddingTop="30dp"
+            app:columnCount="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+           android:paddingLeft="30sp"
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Total Cases : "
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            />
+
+            <TextView
+                android:id="@+id/totalCount"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="loading ..."
+                android:textFontWeight="@android:integer/config_mediumAnimTime"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                android:textColor="#ff0000"
+                />
+            <TextView
+
+                android:paddingTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Active Cases:"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingLeft="30sp"
+                />
+            <TextView
+                android:id="@+id/activeCount"
+                android:paddingTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="loading ..."
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                android:textColor="#ff0000"
+                />
+            <TextView
+
+                android:paddingTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Recovery   :"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingLeft="30sp"
+                />
+            <TextView
+                android:id="@+id/recoveryCount"
+                android:paddingTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="loading ..."
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                android:textColor="#ff0000"
+                />
+        </androidx.gridlayout.widget.GridLayout>
+
+<Button
+    android:id="@+id/refresh"
+    android:layout_marginTop="50dp"
+    android:layout_marginLeft="30dp"
+    android:text="Refresh"
+    android:elevation="20dp"
+    android:textColor="#fff"
+    android:textStyle="bold"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/updated"
+            android:text=" "
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
