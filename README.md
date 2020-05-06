@@ -1,5 +1,5 @@
 # Covid19India-androidapp
-- This is an Covid19 tracker for India. this is project is for beginners.
+- This is an Covid19 tracker for India. this project is for beginners.
 
 ## Features 
   - list of states and number of cases appered.
